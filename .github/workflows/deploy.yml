@@ -10,7 +10,6 @@ jobs:
       fail-fast: false
       matrix:
         python-version:
-          - '3.7'
           - '3.8'
           - '3.9'
           - '3.10'
@@ -23,9 +22,9 @@ jobs:
           - windows-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install Rust
@@ -43,7 +42,7 @@ jobs:
         uses: PyO3/maturin-action@v1
         with:
           command: publish
-          args: --username=__token__ ${{ matrix.os == 'ubuntu-latest' && matrix.python-version == '3.7' && '' || '--no-sdist' }} --interpreter=python${{ !startsWith(matrix.os, 'windows') && matrix.python-version || '' }}
+          args: --username=__token__ ${{ matrix.os == 'ubuntu-latest' && matrix.python-version == '3.8' && '' || '--no-sdist' }} --interpreter=python${{ !startsWith(matrix.os, 'windows') && matrix.python-version || '' }}  # 3.8 instead of 3.7
         env:
           MATURIN_PASSWORD: ${{ secrets.pypi_password }}
         if: matrix.os != 'macos-latest'
