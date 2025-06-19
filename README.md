@@ -55,7 +55,7 @@ To use this library, you can clone this repository and run the provided `buildse
 git clone https://github.com/DevHybrid-DE/braveblock
 cd braveblock
 chmod +x buildsetup.sh
-./buildsetup.shi didn#t 
+./buildsetup.sh
 ```
 
 
