@@ -52,7 +52,7 @@ I have not published this fork to PyPI. Instead, I maintain a local build for us
 To use this library, you can clone this repository and run the provided `buildsetup.sh` script to set up a complete Rust/Python build environment:
 
 ```sh
-git clone https://github.com/YOUR_USERNAME/braveblock
+git clone https://github.com/DevHybrid-DE/braveblock
 cd braveblock
 chmod +x buildsetup.sh
 ./buildsetup.shi didn#t 
