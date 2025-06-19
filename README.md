@@ -73,7 +73,7 @@ This approach ensures compatibility with Python 3.12 and 3.13 and uses the lates
 
 The public Python interface remains unchanged. Only internal Rust method calls have been updated to match the current API of `adblock-rust`.
 
-```python
+```
 import braveblock
 
 # Initialize the engine loaded with a rules list
@@ -92,6 +92,7 @@ adblocker.check_network_urls(
     request_type="image",
 )
 
+```
 
 ## License
 
